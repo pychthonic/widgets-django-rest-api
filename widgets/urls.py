@@ -39,10 +39,10 @@ SchemaView = get_schema_view(
 
 urlpatterns = [
     re_path('admin/', admin.site.urls),
-    re_path(r'^(?P<version>\w{1,3})/widgets/id/(?P<id>\d+)',
+    re_path(r'^(?P<version>\w{1,3})/widgets/id/(?P<id>\d+)$',
             views.widget),
     re_path(r'^(?P<version>\w{1,3})/widgets/types', views.widget_types),
-    re_path(r'^(?P<version>\w{1,3})/widgets/type/(?P<widget_type>\w+)',
+    re_path(r'^(?P<version>\w{1,3})/widgets/type/(?P<widget_type>\w+)$',
             views.widgets),
     re_path(r'^(?P<version>\w{1,3})/widgets', views.widgets),
     path('swagger.json',
