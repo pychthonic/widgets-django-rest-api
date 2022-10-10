@@ -4,7 +4,7 @@ version: '3'
 services:
   api:
     build: .
-    command: bash -c "python manage.py createsuperuser --noinput --username admin --email example@example.com && bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
     container_name: widgets
     volumes:
       - .:/widgets
