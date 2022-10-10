@@ -4,9 +4,12 @@ version: '3'
 services:
   api:
     build: .
-    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python manage.py createsuperuser --noinput --username $DJANGOSUPERUSER_USERNAME --email $DJANGO_SUPERUSER_USERNAME --password $DJANGO_SUPERUSER_PASSWORD && bash -c "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"
     container_name: widgets
     volumes:
       - .:/widgets
     ports:
       - "8000:8000"
+
+
+
