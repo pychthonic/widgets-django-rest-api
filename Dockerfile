@@ -4,9 +4,9 @@ ENV PYTHONUNBUFFERED 1
 
 # For running & testing docker container locally.
 # Obviously not for production software:
-ENV DJANGO_SUPERUSER_USERNAME=admin
-ENV DJANGO_SUPERUSER_PASSWORD=admin
-ENV DJANGO_SUPERUSER_EMAIL=example@example.com
+ENV DJANGO_SUPERUSER_USERNAME admin
+ENV DJANGO_SUPERUSER_PASSWORD admin
+ENV DJANGO_SUPERUSER_EMAIL example@example.com
 
 RUN mkdir /widgets
 
