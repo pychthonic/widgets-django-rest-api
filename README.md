@@ -13,7 +13,7 @@ docker-compose build
 docker-compose up
 ```
 
-After that, you can first visit the swagger page at 
+After that, you can visit the swagger page at 
 
 ```
 localhost:8000/swagger
@@ -73,15 +73,18 @@ curl --location --request GET 'localhost:8000/v1/widgets/types' \
 When building the docker image, the tests in widgets/tests.py will run,
 and if any tests fail, the build will fail.
 
-To run the tests, activate a virtual envirnment and run them like so:
+You can run the app locally without a docker container like so:
 
 ```
 python3 -m venv venv
 source venv/bin/activate
-python3 manage.py test
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
 ```
 
-You can also run the app locally without a docker container like so:
+To run the tests, activate a virtual envirnment and run them like so:
 
 ```
 python3 -m venv venv
