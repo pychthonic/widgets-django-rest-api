@@ -81,7 +81,7 @@ To check what types of widgets are available and currently in use,
 send a GET request to /{version}/widgets/types like so:
 
 ```
-curl --location --request GET 'localhost:8000/v1/widgets/types' \
+curl --request GET 'localhost:8000/v1/widgets/types' \
 --header 'Content-Type: application/json'
 ```
 
