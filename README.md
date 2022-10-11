@@ -13,14 +13,14 @@ docker-compose build
 docker-compose up
 ```
 
-After that, you can first visit the swagger page at localhost:8000/swagger
+After that, you can first visit the swagger page at 
 
-The current version is 'v1' and the endpoints are:
+```
+localhost:8000/swagger
+```
 
 To get a list of all widgets currently in the database, send a GET
-request to /{version}/widgets/
-
-like so:
+request to /{version}/widgets/ like so:
 
 ```
 curl --request GET 'localhost:8000/v1/widgets/' \
@@ -28,9 +28,7 @@ curl --request GET 'localhost:8000/v1/widgets/' \
 ```
 
 To get information on a specific widget, send a GET request to
-/{version}/widgets/{id}
-
-like so:
+/{version}/widgets/{id} like so:
 
 ```
 curl --request GET 'localhost:8000/v1/widgets/id/1' \
@@ -38,9 +36,7 @@ curl --request GET 'localhost:8000/v1/widgets/id/1' \
 ```
 
 To create a new widget with name "new widget", of type "heatMap", send
-a POST request to /{verions}/widgets
-
-like so:
+a POST request to /{verions}/widgets like so:
 
 ```
 curl --request POST 'localhost:8000/v1/widgets/' \
@@ -50,9 +46,7 @@ curl --request POST 'localhost:8000/v1/widgets/' \
 
 To change the name of widget with id 3 to "new heat map widget", send a 
 PUT request to /{version}/widgets/3 with a request body of
-{"name": "new heat map widget"}
-
-like so:
+{"name": "new heat map widget"} like so:
 
 ```
 curl --request PUT 'localhost:8000/v1/widgets/id/3' \
@@ -60,9 +54,8 @@ curl --request PUT 'localhost:8000/v1/widgets/id/3' \
 --data-raw '{"name": "new heat map widget"}'
 ```
 
-To delete widget with id 3, send a DELETE request to /{version}/widgets/id/3
-
-like so:
+To delete widget with id 3, send a DELETE request to
+/{version}/widgets/id/3 like so:
 
 ```
 curl --request DELETE 'localhost:8000/v1/widgets/id/3' \
@@ -70,9 +63,7 @@ curl --request DELETE 'localhost:8000/v1/widgets/id/3' \
 ```
 
 To check what types of widgets are available and currently in use,
-send a GET request to /{version}/widgets/types
-
-like so:
+send a GET request to /{version}/widgets/types like so:
 
 ```
 curl --location --request GET 'localhost:8000/v1/widgets/types' \
