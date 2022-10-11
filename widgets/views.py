@@ -3,6 +3,7 @@ http responses. Since this is a REST API, the functions return http
 responses with JSON objects in their response bodies.
 """
 
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.request import Request    # used for type hints
@@ -13,7 +14,7 @@ from .models import Widget
 from .models import WIDGET_TYPES
 from .serializers import WidgetSerializer
 
-
+@swagger_auto_schema(methods=['POST'], request_body=WidgetSerializer)
 @api_view(['GET', 'POST'])
 def widgets(request: Request,
             version: str,
@@ -57,7 +58,7 @@ def widgets(request: Request,
             return Response(response_body,
                             status=status.HTTP_400_BAD_REQUEST)
 
-
+@swagger_auto_schema(methods=['PUT'], request_body=WidgetSerializer)
 @api_view(['GET', 'PUT', 'DELETE'])
 def widget(request: Request,
            version: str,
