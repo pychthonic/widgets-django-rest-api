@@ -69,6 +69,14 @@ curl --request DELETE 'localhost:8000/v1/widgets/id/3' \
 --header 'Content-Type: application/json'
 ```
 
+To get a list of all widgets of a certain type, send a GET request to
+/{version}/widgets/type/{widget_type} like so:
+
+```
+curl --request GET 'localhost:8000/v1/widgets/type/heatMap' \
+--header 'Content-Type: application/json'
+```
+
 To check what types of widgets are available and currently in use,
 send a GET request to /{version}/widgets/types like so:
 
