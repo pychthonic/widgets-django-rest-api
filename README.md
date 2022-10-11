@@ -43,7 +43,7 @@ curl --request GET 'localhost:8000/v1/widgets/id/1' \
 ```
 
 To create a new widget with name "new widget", of type "heatMap", send
-a POST request to /{verions}/widgets like so:
+a POST request to /{version}/widgets like so:
 
 ```
 curl --request POST 'localhost:8000/v1/widgets/' \
