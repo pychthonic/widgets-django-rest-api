@@ -35,7 +35,7 @@ curl --request GET 'localhost:8000/v1/widgets/' \
 ```
 
 To get information on a specific widget, send a GET request to
-/{version}/widgets/{id} like so:
+/{version}/widgets/id/{id} like so:
 
 ```
 curl --request GET 'localhost:8000/v1/widgets/id/1' \
