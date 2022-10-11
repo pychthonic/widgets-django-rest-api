@@ -52,7 +52,7 @@ curl --request POST 'localhost:8000/v1/widgets/' \
 ```
 
 To change the name of widget with id 3 to "new heat map widget", send a 
-PUT request to /{version}/widgets/3 with a request body of
+PUT request to /{version}/widgets/id/3 with a request body of
 {"name": "new heat map widget"} like so:
 
 ```
