@@ -90,7 +90,7 @@ curl --location --request GET 'localhost:8000/v1/widgets/types' \
 When building the docker image, the tests in widgets/tests.py will run,
 and if any tests fail, the build will fail.
 
-To run the tests outside of docker, activate a virtual envirnment and
+To run the tests outside of docker, activate a virtual environment and
 do this:
 
 ```
