@@ -1,10 +1,13 @@
-# widgets-django-rest-api
+# Django REST API for Widgets
 
+## Overview
 
 This is a REST API for managing widgets. It will accept GET, POST, PUT,
 and DELETE requests. 
 
-To run it locally, use the following commands:
+## How to run it locally
+
+Use the following commands:
 
 ```
 git clone https://github.com/pychthonic/widgets-django-rest-api.git
@@ -13,11 +16,15 @@ docker-compose build
 docker-compose up
 ```
 
-After that, you can visit the swagger page at 
+## OpenAPI Spec
+
+When the container is running, you can visit the swagger page at 
 
 ```
 localhost:8000/swagger
 ```
+
+## How to use it
 
 To get a list of all widgets currently in the database, send a GET
 request to /{version}/widgets/ like so:
@@ -70,19 +77,10 @@ curl --location --request GET 'localhost:8000/v1/widgets/types' \
 --header 'Content-Type: application/json'
 ```
 
+## Tests
+
 When building the docker image, the tests in widgets/tests.py will run,
 and if any tests fail, the build will fail.
-
-You can run the app locally without a docker container like so:
-
-```
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py runserver
-```
 
 To run the tests, activate a virtual envirnment and run them like so:
 
@@ -93,4 +91,17 @@ pip3 install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py test
+```
+
+## No docker?
+
+You can run the app locally without a docker container like so:
+
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
 ```
